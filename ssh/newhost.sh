@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/Akbar218
+# My Telegram : https://t.me/hells_BAD_KING
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -14,20 +14,20 @@ LIGHT='\033[0;37m'
 #Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$(curl https://raw.githubusercontent.com/lizsvr/project/main/ipvps.txt | grep $MYIP | awk '{print $3}')
+IZIN=$(curl https://github.com/SanukaS/Cloudflarefront/blob/main/ipvps.txt | grep $MYIP | awk '{print $3}')
 if [ $MYIP = $MYIP ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/liz_mine"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/hells_BAD_KING"
 exit 0
 fi
 error1="${RED}[ERROR]${NC}"
 success="${GREEN}[SUCCESS]${NC}"
 clear
 echo -e "========================="
-read -rp "Masukan Domain/Host : " -e domain
+read -rp "Input Domain/Host : " -e domain
 echo -e "========================="
 echo -e "${success} Please wait..."
 mkdir -p /usr/bin/xray
@@ -47,7 +47,7 @@ sleep 5
 # timedatectl set-ntp true
 # systemctl enable chronyd && systemctl restart chronyd
 # systemctl enable chrony && systemctl restart chrony
-# timedatectl set-timezone Asia/Jakarta
+# timedatectl set-timezone Asia/Colombo
 # chronyc sourcestats -v
 # chronyc tracking -v
 # mkdir -p /etc/xray
