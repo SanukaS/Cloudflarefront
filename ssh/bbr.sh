@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/Akbar218
+# My Telegram : https://t.me/hells_BAD_KING
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -14,17 +14,17 @@ LIGHT='\033[0;37m'
 #Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$(curl https://raw.githubusercontent.com/lizsvr/project/main/ipvps.txt | grep $MYIP | awk '{print $3}')
+IZIN=$(curl https://github.com/SanukaS/Cloudflarefront/blob/main/ipvps.txt | grep $MYIP | awk '{print $3}')
 if [ $MYIP = $MYIP ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/liz_mine"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/hells_BAD_KING"
 exit 0
 fi
 clear
-#Optimasi Speed By Akbar Maulana
+#Speed Optimization by Sanuka
 Add_To_New_Line(){
 	if [ "$(tail -n1 $1 | wc -l)" == "0"  ];then
 		echo "" >> "$1"
@@ -42,11 +42,11 @@ Install_BBR(){
 echo "#############################################"
 echo "Install TCP_BBR..."
 if [ -n "$(lsmod | grep bbr)" ];then
-echo "TCP_BBR sudah diinstall."
+echo "TCP_BBR already installed."
 echo "#############################################"
 return 1
 fi
-echo "Mulai menginstall TCP_BBR..."
+echo "Start installing TCP_BBR..."
 modprobe tcp_bbr
 Add_To_New_Line "/etc/modules-load.d/modules.conf" "tcp_bbr"
 Add_To_New_Line "/etc/sysctl.conf" "net.core.default_qdisc = fq"
@@ -55,7 +55,7 @@ sysctl -p
 if [ -n "$(sysctl net.ipv4.tcp_available_congestion_control | grep bbr)" ] && [ -n "$(sysctl net.ipv4.tcp_congestion_control | grep bbr)" ] && [ -n "$(lsmod | grep "tcp_bbr")" ];then
 	echo "TCP_BBR Install Success."
 else
-	echo "Gagal menginstall TCP_BBR."
+	echo "Failed to install TCP_BBR."
 fi
 echo "#############################################"
 }
