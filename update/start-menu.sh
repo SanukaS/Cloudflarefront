@@ -41,13 +41,13 @@ memory=$(neofetch | grep "Memory" | cut -d: -f2 | sed 's/ //g')
 echo -e "Getting Information..."
 clear
 # echo -e "$BLUE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$NC
-# echo -e "$BRED           SELAMAT DATANG            $NC"
+# echo -e "$BRED           WELCOME            $NC"
 # echo -e "$BLUE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$NC
-# figlet LIZSVR | lolcat
+# figlet sanukas | lolcat
 # #echo -e "$NC"
-# echo -e "Telegram : @liz_mine"
+# echo -e "Telegram : @hells_BAD_KING"
 echo -e "$BLUE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
-echo -e "$BRED          Informasi System           $NC"
+echo -e "$BRED          System Information           $NC"
 echo -e "$BLUE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
 echo -e "$CLAY IP Address :$NC $ip $NC"
 echo -e "$CLAY Domain :$NC $domainhost $NC"
@@ -130,5 +130,5 @@ fi
 # echo -e " Xray/V2Ray              :$RED [Error] $NC"
 # fi
 echo -e "$BLUE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
-echo -e "$BRED----------- Mod By LIZSVR -----------"
+echo -e "$BRED----------- Mod By SanukaS -----------"
 echo -e "$BLUE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
