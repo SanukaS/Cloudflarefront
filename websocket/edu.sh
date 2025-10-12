@@ -1,6 +1,6 @@
 #!/bin/bash
 # Proxy For Edukasi & Imclass
-# My Telegram : https://t.me/Akbar218
+# My Telegram : https://t.me/hells_BAD_KING
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -15,18 +15,18 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$(curl https://raw.githubusercontent.com/lizsvr/project/main/ipvps.txt | grep $MYIP | awk '{print $3}')
+IZIN=$(curl https://github.com/SanukaS/Cloudflarefront/blob/main/ipvps.txt | grep $MYIP | awk '{print $3}')
 if [ $MYIP = $MYIP ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/liz_mine"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/hells_BAD_KING"
 exit 0
 fi
 clear
 # Link Hosting Kalian
-akbarvpn="raw.githubusercontent.com/lizsvr/cfnfree/main/websocket"
+akbarvpn="raw.githubusercontent.com/SanukaS/Cloudflarefront/main/websocket"
 
 # Getting Proxy Template
 wget -q -O /usr/local/bin/ws-nontls https://${akbarvpn}/websocket.py
@@ -36,8 +36,7 @@ chmod +x /usr/local/bin/ws-nontls
 # Installing Service
 cat > /etc/systemd/system/ws-nontls.service << END
 [Unit]
-Description=Python Proxy Mod By Akbar Maulana
-Documentation=https://t.me/Akbar218
+Description=Python Proxy Mod By Sanuka
 After=network.target nss-lookup.target
 
 [Service]
@@ -65,8 +64,7 @@ chmod +x /usr/local/bin/ws-ovpn
 # Installing Service
 cat > /etc/systemd/system/ws-ovpn.service << END
 [Unit]
-Description=Python Proxy Mod By LamVpn
-Documentation=https://t.me/LamVpn
+Description=Python Proxy Mod By Sanuka
 After=network.target nss-lookup.target
 
 [Service]
@@ -94,8 +92,7 @@ chmod +x /usr/local/bin/ws-tls
 # Installing Service
 cat > /etc/systemd/system/ws-tls.service << END
 [Unit]
-Description=Python Proxy Mod By geovpn
-Documentation=https://t.me/geovpn
+Description=Python Proxy Mod By Sanuka
 After=network.target nss-lookup.target
 
 [Service]
