@@ -1,6 +1,5 @@
 [Unit]
-Description=Python Proxy Mod By geovpn
-Documentation=https://t.me/geovpn
+Description=Python Proxy Mod By Sanuka
 After=network.target nss-lookup.target
 
 [Service]
