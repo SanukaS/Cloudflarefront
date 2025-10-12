@@ -12,21 +12,21 @@ LIGHT='\033[0;37m'
 # ==========================================
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$(curl https://raw.githubusercontent.com/lizsvr/project/main/ipvps.txt | grep $MYIP | awk '{print $3}')
+IZIN=$(curl https://github.com/SanukaS/Cloudflarefront/blob/main/ipvps.txt | grep $MYIP | awk '{print $3}')
 if [ $MYIP = $MYIP ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/liz_mine"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/hells_BAD_KING"
 exit 0
 fi
 clear
-#cek port dan tampilkan
+#check port and display
 
 ws="$(cat ~/log-install.txt | grep -w "Websocket None TLS" | cut -d: -f2|sed 's/ //g')"
 
-#input port untuk pengganti
+#input port for replacement
 echo -e "======================================"
 echo -e ""
 echo -e "Change Port $ws"
@@ -41,7 +41,7 @@ cek=$(netstat -nutlp | grep -w $ws2)
 if [[ -z $cek ]]; then
 
 
-#ganti port layanan
+#change service port
 sed -i "s/$ws/$ws2/g" /etc/default/sslh
 sed -i "s/   - Websocket None TLS      : $ws/   - Websocket None TLS      : $ws2/g" /root/log-install.txt
 
@@ -60,7 +60,7 @@ systemctl restart sslh
 systemctl daemon-reload
 systemctl restart ws-nontls > /dev/null
 
-#ganti port info
+#change port info
 
 echo -e "\e[032;1mPort $ws2 modified successfully\e[0m"
 else
