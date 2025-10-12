@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/Akbar218
+# My Telegram : https://t.me/hells_BAD_KING
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -14,13 +14,13 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$(curl https://raw.githubusercontent.com/lizsvr/cfnfree/main/ipvps.txt | grep $MYIP | awk '{print $3}')
+IZIN=$(curl https://github.com/SanukaS/Cloudflarefront/blob/main/ipvps.txt | grep $MYIP | awk '{print $3}')
 if [ $MYIP = $MYIP ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/liz_mine"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/hells_BAD_KING"
 exit 0
 fi
 clear
@@ -30,14 +30,14 @@ domain=$(cat /etc/xray/domain)
 clear
 email=$(cat /home/email)
 if [[ "$email" = "" ]]; then
-echo "Masukkan Email Untuk Menerima Backup"
+echo "Enter Email To Receive Backup"
 read -rp "Email : " -e email
 cat <<EOF>>/home/email
 $email
 EOF
 fi
 clear
-echo "Mohon Menunggu , Proses Backup sedang berlangsung !!"
+echo "Please wait, the backup process is in progress !!"
 cd /root
 rm -rf /root/backup
 mkdir /root/backup
@@ -82,4 +82,4 @@ Link Backup   : $link
 Tanggal       : $date
 ==================================
 "
-echo "Silahkan cek Kotak Masuk $email"
+echo "Please check your email inbox"
