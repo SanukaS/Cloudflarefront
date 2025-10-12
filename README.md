@@ -4,7 +4,7 @@
 rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-get update -y && apt-get upgrade && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/SanukaS/Cloudflarefront/main/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
 ```
 
-### Fitur Script [ Mod By LIZ ]
+### Feature Script
 
 • SSH & OpenVPN
 
@@ -18,7 +18,7 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 
 ### Os Supported
 
-• Debian 10 Only
+• Debian 10 & 11
 
 • Ubuntu 18.04 & 20.04 (Recommended)
 
@@ -52,7 +52,7 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 
  ### Server Information & Other Features
 
-• Timezone                : Asia/Jakarta (GMT +7)
+• Timezone                : Asia/Colombo (GMT +5.30)
 
 • Fail2Ban                : [ON]
 
@@ -64,9 +64,9 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 
 • IPv6                    : [OFF]
 
-• Autoreboot On 05.00 GMT +7
+• Autoreboot On 03.30 GMT +5.30
 
-• Futo Delete Expired Account
+• Auto Delete Expired Account
 
 
 
