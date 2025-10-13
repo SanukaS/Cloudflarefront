@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/Akbar218
+# My Telegram : https://t.me/hells_BAD_KING
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -13,22 +13,22 @@ LIGHT='\033[0;37m'
 # ==========================================
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$(curl https://raw.githubusercontent.com/lizsvr/project/main/ipvps.txt | grep $MYIP | awk '{print $3}')
+IZIN=$(curl https://github.com/SanukaS/Cloudflarefront/blob/main/ipvps.txt | grep $MYIP | awk '{print $3}')
 if [ $MYIP = $MYIP ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/liz_mine"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/hells_BAD_KING"
 exit 0
 fi
 clear
-# By Akbar Maulana
+# By Sanuka Ruchilana
 # ==================================================
-# Link Hosting Kalian
-akbarvpn="raw.githubusercontent.com/lizsvr/cfnfree/main/ssh"
+# Your Hosting Link
+akbarvpn="raw.githubusercontent.com/SanukaS/Cloudflarefront/main/ssh"
 
-# initialisasi var
+# initialization var
 export DEBIAN_FRONTEND=noninteractive
 OS=`uname -m`;
 MYIP=$(wget -qO- ipinfo.io/ip);
@@ -117,10 +117,10 @@ END
 sed -i $MYIP2 /etc/openvpn/ssl.ovpn;
 
 cd
-# pada tulisan xxx ganti dengan alamat ip address VPS anda 
+# In the text xxx, replace it with your VPS IP address
 /etc/init.d/openvpn restart
 
-# masukkan certificatenya ke dalam config client TCP 1194
+# enter the certificate into config client TCP 1194
 echo '<ca>' >> /etc/openvpn/tcp.ovpn
 cat /etc/openvpn/server/ca.crt >> /etc/openvpn/tcp.ovpn
 echo '</ca>' >> /etc/openvpn/tcp.ovpn
@@ -128,7 +128,7 @@ echo '</ca>' >> /etc/openvpn/tcp.ovpn
 # Copy config OpenVPN client ke home directory root agar mudah didownload ( TCP 1194 )
 cp /etc/openvpn/tcp.ovpn /home/vps/public_html/tcp.ovpn
 
-# masukkan certificatenya ke dalam config client UDP 2200
+# enter the certificate into config client UDP 2200
 echo '<ca>' >> /etc/openvpn/udp.ovpn
 cat /etc/openvpn/server/ca.crt >> /etc/openvpn/udp.ovpn
 echo '</ca>' >> /etc/openvpn/udp.ovpn
@@ -136,7 +136,7 @@ echo '</ca>' >> /etc/openvpn/udp.ovpn
 # Copy config OpenVPN client ke home directory root agar mudah didownload ( UDP 2200 )
 cp /etc/openvpn/udp.ovpn /home/vps/public_html/udp.ovpn
 
-# masukkan certificatenya ke dalam config client SSL
+# Enter the certificate into the SSL client config
 echo '<ca>' >> /etc/openvpn/ssl.ovpn
 cat /etc/openvpn/server/ca.crt >> /etc/openvpn/ssl.ovpn
 echo '</ca>' >> /etc/openvpn/ssl.ovpn
@@ -144,7 +144,7 @@ echo '</ca>' >> /etc/openvpn/ssl.ovpn
 # Copy config OpenVPN client ke home directory root agar mudah didownload ( SSL )
 cp /etc/openvpn/ssl.ovpn /home/vps/public_html/ssl.ovpn
 
-#firewall untuk memperbolehkan akses UDP dan akses jalur TCP
+#firewall to allow UDP access and TCP path access
 
 iptables -t nat -I POSTROUTING -s 10.6.0.0/24 -o $ANU -j MASQUERADE
 iptables -t nat -I POSTROUTING -s 10.7.0.0/24 -o $ANU -j MASQUERADE
