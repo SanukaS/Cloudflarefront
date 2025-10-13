@@ -1,6 +1,6 @@
 #!/bin/bash
-# By Akbar Maulana
-# My Telegram : https://t.me/Akbar218
+# By Sanuka Ruchilana
+# My Telegram : https://t.me/hells_BAD_KING
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -14,31 +14,31 @@ LIGHT='\033[0;37m'
 # ==========================================
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$(curl https://raw.githubusercontent.com/lizsvr/project/main/ipvps.txt | grep $MYIP | awk '{print $3}')
+IZIN=$(curl https://github.com/SanukaS/Cloudflarefront/blob/main/ipvps.txt | grep $MYIP | awk '{print $3}')
 if [ $MYIP = $MYIP ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/liz_mine"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/hells_BAD_KING"
 exit 0
 fi
 clear
 # ==================================================
-# Link Hosting Kalian
-akbarvpn="raw.githubusercontent.com/lizsvr/cfnfree/main/ssh"
+# Your Hosting Link
+akbarvpn="raw.githubusercontent.com/SanukaS/Cloudflarefront/main/ssh"
 
-# Link Hosting Kalian Untuk Xray
-akbarvpnn="raw.githubusercontent.com/lizsvr/cfnfree/main/xray"
+# Your Hosting Link For Xray
+akbarvpnn="raw.githubusercontent.com/SanukaS/Cloudflarefront/main/xray"
 
-# Link Hosting Kalian Untuk Trojan Go
-akbarvpnnn="raw.githubusercontent.com/lizsvr/cfnfree/main/trojango"
+# Your Hosting Link For Trojan Go
+akbarvpnnn="raw.githubusercontent.com/SanukaS/Cloudflarefront/main/trojango"
 
-# Link Hosting Kalian Untuk Stunnel5
-akbarvpnnnn="raw.githubusercontent.com/lizsvr/cfnfree/main/stunnel5"
+# Your Hosting Link For Stunnel5
+akbarvpnnnn="raw.githubusercontent.com/SanukaS/Cloudflarefront/main/stunnel5"
 
-#Link Hosting Kalian Untuk Websocket
-akbarvpnnnnn="raw.githubusercontent.com/lizsvr/cfnfree/main/websocket"
+#Your Hosting Link For Websocket
+akbarvpnnnnn="raw.githubusercontent.com/SanukaS/Cloudflarefront/main/websocket"
 
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
@@ -48,7 +48,7 @@ NET=$(ip -o $ANU -4 route show to default | awk '{print $5}');
 source /etc/os-release
 ver=$VERSION_ID
 
-#detail nama perusahaan
+#company name details
 country=ID
 state=Indonesia
 locality=Indonesia
@@ -88,7 +88,7 @@ cat > /etc/rc.local <<-END
 exit 0
 END
 
-# Ubah izin akses
+# Change access permissions
 chmod +x /etc/rc.local
 
 # enable rc local
@@ -142,8 +142,8 @@ apt install libssl-dev -y
 apt install libssl1.0-dev -y
 apt install dos2unix -y
 
-# set time GMT +7
-ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+# set time GMT +5.30
+ln -fs /usr/share/zoneinfo/Asia/Colombo /etc/localtime
 
 # set locale
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
@@ -305,7 +305,6 @@ cat > /etc/systemd/system/stunnel5.service << END
 [Unit]
 Description=Stunnel5 Service
 Documentation=https://stunnel.org
-Documentation=https://github.com/Akbar218
 After=syslog.target network-online.target
 
 [Service]
@@ -319,7 +318,7 @@ END
 # Service Stunnel5 /etc/init.d/stunnel5
 wget -q -O /etc/init.d/stunnel5 "https://${akbarvpnnnn}/stunnel5.init"
 
-# Ubah Izin Akses
+# Change Access Permissions
 chmod 600 /etc/stunnel5/stunnel5.pem
 chmod +x /etc/init.d/stunnel5
 cp /usr/local/bin/stunnel /usr/local/bin/stunnel5
@@ -381,10 +380,10 @@ sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dr
 # Install BBR
 wget https://${akbarvpn}/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 
-# Ganti Banner
+# Change Banner
 wget -O /etc/issue.net "https://${akbarvpn}/issue.net"
 
-# blockir torrent
+# block torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
 iptables -A FORWARD -m string --string "announce_peer" --algo bm -j DROP
 iptables -A FORWARD -m string --string "find_node" --algo bm -j DROP
